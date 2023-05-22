@@ -38,4 +38,17 @@ export class UserlistComponent{
       }
     );
   }
+
+  deleteUser(userId: string): void {
+    this.apiService.deleteUser(userId).subscribe(
+      response => {
+        console.log('Usuario eliminado:', response);
+        // Actualiza la lista de usuarios después de eliminar uno
+        this.getUsers();
+      },
+      error => {
+        console.log('Error al eliminar el usuario:', error);
+      }
+    );
+  }
 }
