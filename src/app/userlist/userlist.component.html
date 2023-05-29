@@ -4,6 +4,7 @@
       {{ user.nombre }} - {{ user.email }}
       <button (click)="updateUser(user.uid)">Actualizar</button>
       <button (click)="deleteUser(user.uid)">Eliminar</button>
+      <a [routerLink]="['userdetail',user.uid]">Ver Usuario</a>
     </li>
 </ul>
   

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Usuario } from './interfaces/usuarios';
 
 @Injectable({
   providedIn: 'root'
@@ -44,5 +45,12 @@ export class ApiService {
     const url = this.baseUrl + `usuarios/${userId}`;
     const headers = this.getHeaders();
     return this.http.delete(url, { headers });
+  }
+
+  // Obtener un usuario a través de su id
+  getUserById(userId: string){ 
+    const url = this.baseUrl + `usuarios/${userId}`;
+    const headers = this.getHeaders();
+    return this.http.get(url, { headers });
   }
 }

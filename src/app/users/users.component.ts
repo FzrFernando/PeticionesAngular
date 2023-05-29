@@ -6,7 +6,7 @@ import { Usuario } from '../interfaces/usuarios';
   selector: 'app-users',
   templateUrl: './users.component.html'
 })
-export class UsersComponent {
+export class UsersComponent{
   users: Usuario[] = [];
 
   constructor(private apiService: ApiService) { }

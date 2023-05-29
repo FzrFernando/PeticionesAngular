@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UserdetailComponent } from './userdetail/userdetail.component';
 
-// const routes: Routes = [
-//     { path: 'products', component:  },
-//     { path: 'products/:id', component:  },
-//     { path: 'products/new', component:  },
-//     { path: 'products/:id/edit', component: ,
-//       canDeactivate: [] }
-// ];
+const routes: Routes = [
+    { path: 'user/:uid', component:  UserdetailComponent}
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
